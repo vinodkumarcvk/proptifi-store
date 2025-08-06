@@ -11,16 +11,21 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cdk": "^20.1.4",
     "@angular/common": "^20.0.0",
     "@angular/compiler": "^20.0.0",
     "@angular/core": "^20.0.0",
     "@angular/forms": "^20.0.0",
+    "@angular/material": "^20.1.4",
     "@angular/platform-browser": "^20.0.0",
     "@angular/platform-server": "^20.0.0",
     "@angular/router": "^20.0.0",
     "@angular/ssr": "^20.0.2",
+    "@ngbracket/ngx-layout": "^20.0.1",
+    "axios": "^1.11.0",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
+    "sweetalert2": "^11.22.2",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

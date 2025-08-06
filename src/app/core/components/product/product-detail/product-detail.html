@@ -1,0 +1,80 @@
+@if (isLoading) {
+    <div class="loading-state">
+    <mat-spinner></mat-spinner>
+    </div>
+  
+} @else {
+
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" class="product-detail-container">
+
+    <!-- Product Image Section -->
+    <div fxFlex="100" fxFlex.gt-md="40" class="product-image-container">
+      <img [src]="productData.image" alt="{{ productData.title }}" class="product-image">
+      <div class="action-buttons">
+        <button mat-mini-fab color="accent" matTooltip="Add to Wishlist">
+          <mat-icon>favorite_border</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" matTooltip="Share Product">
+          <mat-icon>share</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Info Section -->
+    <div fxFlex="100" fxFlex.gt-md="60" class="product-info-container">
+      
+ <div fxLayout="row " fxLayoutAlign="space-between center">
+  
+  <!-- Product Title (Left Side) -->
+  <h2 style="margin: 0;">
+    {{ productData.title }}
+  </h2>
+
+  <!-- Back Button (Right Side) -->
+  <button mat-stroked-button color="primary" (click)="navigateBack()">
+    <mat-icon>arrow_back</mat-icon>
+    Back to Products
+  </button>
+
+</div>
+
+
+      <div class="rating-section">
+        <span class="rating-badge">{{ productData.rating.rate }}</span>
+        <span class="rating-count">{{ productData.rating.count }} Ratings</span>
+      </div>
+
+      <div class="price-section">
+        <span class="current-price">₹{{ productData.price }}</span>
+        <span class="original-price">₹999</span>
+        <span class="discount">78% off</span>
+      </div>
+
+      <div class="quantity-selector">
+        <button mat-mini-button (click)="decreaseQty()">-</button>
+        <span>{{ quantity }}</span>
+        <button mat-mini-button (click)="increaseQty()">+</button>
+      </div>
+
+      <div class="delivery-info">
+        <mat-icon>local_shipping</mat-icon>
+        <span>Free delivery by Tomorrow</span>
+      </div>
+
+      <div class="offers-section">
+        <h4>Available Offers</h4>
+        <ul>
+          <li><span class="offer-tag">Bank Offer</span> 5% Unlimited Cashback on Credit Cards</li>
+          <li><span class="offer-tag">Special Price</span> Get extra ₹100 off (price inclusive of cashback/coupon)</li>
+          <li><span class="offer-tag">Partner Offer</span> Free 1 Year Subscription on Order</li>
+        </ul>
+      </div>
+
+      <div class="action-section">
+        <button mat-raised-button color="primary" (click)="buyNow()">BUY NOW</button>
+        <button mat-stroked-button color="accent" (click)="addToCart()">ADD TO CART</button>
+      </div>
+
+    </div>
+  </div>
+}

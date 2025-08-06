@@ -1,0 +1,93 @@
+::ng-deep .globalFilter {
+  width: 500px;
+
+  .mat-mdc-form-field {
+    width: 100%;
+    width: 500px;
+
+    .mat-mdc-form-field-input-control {
+      width: 100%;
+      width: 500px;
+    }
+  }
+}
+
+::ng-deep .sidenav {
+  background-color: #f5f5f5;
+  padding: 16px;
+  height: calc(100vh - 64px); // Adjust for toolbar height
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+::ng-deep .content-area {
+  padding: 16px;
+  overflow-y: auto;
+  height: calc(100vh - 64px); // Adjust for toolbar height
+}
+
+::ng-deep .mainGlobalHeader {
+  
+    background-color: #ced1d1 !important;
+    .toolbar_btn_group{
+
+      color: rgb(184, 6, 6);
+    }
+    .logoName{
+          font-size: 23px;
+    font-style: normal;
+    color: #e6327a;
+    }
+}
+
+::ng-deep .globalContentCard {
+  background-color: #fff !important;
+
+  .titleAndfilterContainer {
+    padding: 10px 3px;
+
+    .mat-mdc-text-field-wrapper {
+      background-color: #fff !important;
+      border: 1px solid #dfdfdf;
+     
+    }
+  }
+
+  .mat-mdc-card-title {
+    h5 {
+      color: #023047;
+      margin: 0;
+      padding: 0;
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
+  .mat-mdc-table {
+    background-color: #fff;
+
+    .clickable-row {
+  cursor: pointer;
+}
+
+.link-button {
+  padding: 0;
+  min-width: auto;
+  background: none;
+  color: #15104d; // Link Blue
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+
+
+  }
+  .mat-mdc-paginator-outer-container {
+    background-color: #fff;
+  }
+}
